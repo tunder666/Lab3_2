@@ -1,20 +1,84 @@
-// Lab3_2.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+#include <string.h>
+
+using namespace std;
+
+void task1()
+{
+    cout << "ENTER ARRAY\n\n";
+
+    int arr_size;
+    cout << "Enter size of array: ";
+    cin >> arr_size;
+
+    int* arr = new int[arr_size];
+    for (int i = 0; i < arr_size; i++) {
+        cout << i + 1 << ". ";
+        cin >> arr[i];
+    }
+    cout << "You entered " << arr_size << " elements of the array" << endl;
+    system("pause");
+}
+
+
+
+void task2()
+{
+    
+
+    system("pause");
+}
+
+
+void task3()
+{
+    cout << "task 3 " << endl;
+    system("pause");
+}
+void task4()
+{
+    cout << "task 4 " << endl;
+    system("pause");
+}
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    int choice = 0;
+    while (true)
+    {
+        system("CLS");//clear console
+        cout << "===========================\n";
+        cout << "1. Task 1\n" << "2. Task 2\n" << "3. Task 3\n" << "4. Task 4\n" << "5. Exit\n";
+        cout << "What do you want to choose? ";
+        cin >> choice;
+        cout << "===========================\n\n";
+        switch (choice)
+        {
+        case 1:
+        {
+            task1();
+            break;
+        }
+        case 2:
+        {
+            task2();
+            break;
+        }
+        case 3:
+        {
+            task3();
+            break;
+        }
+        case 4:
+        {
+            task4();
+            break;
+        }
+        default:
+        {
+            return 0;
+        }
+        }
+    }
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
