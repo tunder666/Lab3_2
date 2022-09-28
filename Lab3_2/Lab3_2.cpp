@@ -3,15 +3,16 @@
 
 using namespace std;
 
+int* arr;
+int arr_size;
 void task1()
 {
     cout << "ENTER ARRAY\n\n";
 
-    int arr_size;
     cout << "Enter size of array: ";
     cin >> arr_size;
 
-    int* arr = new int[arr_size];
+    arr = new int[arr_size];
     for (int i = 0; i < arr_size; i++) {
         cout << i + 1 << ". ";
         cin >> arr[i];
@@ -24,8 +25,14 @@ void task1()
 
 void task2()
 {
-    
-
+    if (arr_size > 0) {
+        for (int i = 0; i < arr_size; i++) {
+            cout << i << ". " << arr[i] << endl;
+        }
+    }
+    else {
+        cout << "Enter array!" << endl;
+    }
     system("pause");
 }
 
